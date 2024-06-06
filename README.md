@@ -7,15 +7,37 @@ We're using Jekyll to generate static HTML from Markdown.
 
 ### Setup
 
-Jekyll suggests that you not rely on the default Ruby install,
-and instead [install Ruby with Homebrew](https://jekyllrb.com/docs/installation/macos/),
-and then:
+On MacOS, we want to install via Homebrew rather than relying on the default install.
 ```
-gem install jekyll
+brew install chruby ruby-install xz
+```
+
+We'll then install a Ruby version matching [the version used by Github Pages](https://pages.github.com/versions/):
+```
+ruby-install ruby 2.7.4
+```
+
+Then, assuming your shell is zshell:
+```
+echo "source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh" >> ~/.zshrc
+echo "source $(brew --prefix)/opt/chruby/share/chruby/auto.sh" >> ~/.zshrc
+echo "chruby ruby-2.7.4" >> ~/.zshrc
+```
+
+Then open a new shell, and confirm that you've got the right Ruby version:
+```
+ruby -v # should be 2.7.4
+```
+
+(The steps above are [recommended by Jekyll](https://jekyllrb.com/docs/installation/macos/), but modified to reflect the environment provided by Github Pages.)
+
+Now install Jekyll itself and start a development server:
+```
 cd docs
+bundle install
 bundle exec jekyll serve
 ```
-You now have a development server running locally that will update to reflect changes in the source files.
+
 
 ### PRs and Reviews
 
