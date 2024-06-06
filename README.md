@@ -9,7 +9,13 @@ We're using Jekyll to generate static HTML from Markdown.
 
 Jekyll suggests that you not rely on the default Ruby install,
 and instead [install Ruby with Homebrew](https://jekyllrb.com/docs/installation/macos/),
-and then `gem install jekyll`.
+and then:
+```
+gem install jekyll
+cd docs
+bundle exec jekyll serve
+```
+You now have a development server running locally that will update to reflect changes in the source files.
 
 ### PRs and Reviews
 
