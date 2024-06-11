@@ -1,0 +1,264 @@
+<!--
+  Copyright 2018 The Distill Template Authors
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!doctype html>
+
+<head>
+  <script src="template.v2.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf8">
+</head>
+
+<body>
+  <distill-header></distill-header>
+  <d-front-matter>
+    <script id='distill-front-matter' type="text/json">{
+    "title": "The Privacy Budget Registry",
+    "description": "This resource aims to support practitions deploying differential privacy in practice. It endeavours to leave the reader with practical intuition, responsible guidance and practical case studies of privacy budgets used in practice by organisations today.",
+    "published": "Jun 7, 2024",
+    "authors": [
+      {
+        "author":"Nicolas Berrios",
+        "authorURL":"https://oblivious.com",
+        "affiliations": [{"name": "Oblivious"}]
+      },
+      {
+        "author":"Jack Fitzsimons",
+        "authorURL":"https://oblivious.com",
+        "affiliations": [{"name": "Oblivious"}]
+      }
+    ],
+    "katex": {
+      "delimiters": [
+        {"left": "$$", "right": "$$", "display": false}
+      ]
+    }
+  }</script>
+  </d-front-matter>
+  <d-title>
+    <!--figure style="grid-column: page; margin: 1rem 0;"><img src="momentum.png"
+        style="width:100%; border: 1px solid rgba(0, 0, 0, 0.2);" /></figure-->
+    <p>This resource aims to support practitions deploying differential privacy in practice. It endeavours to leave the reader with practical intuition, responsible guidance and practical case studies of privacy budgets used in practice by organisations today.</p>
+  </d-title>
+
+
+  <d-article >
+
+    <d-contents>
+      <nav class="l-text figcaption">
+        <h3>Contents</h3>
+        <div><a href="#overview">
+          Overview
+        </a></div>
+        <div><a href="#intro-dp">
+          Introduction to Differential Privacy
+        </a></div>
+        <ul>
+          <li><a href="#rand-resp">Randomized Response Surveys</a></li>
+          <li><a href="#eps-dp">ε-Differential Privacy</a></li>
+          <li><a href="#local-dp">Local Differential Privacy</a></li>
+          <li><a href="#global-dp">Global Differential Privacy</a></li>
+          <li><a href="#eps-delta-dp">(ε, δ)-Differential Privacy</a></li>
+          <li><a href="#zCDP">Zero Concentrate Differential Privacy</a></li>
+          <li><a href="#dp-conversion">Converting Between Paradigms</a></li>
+       </ul>
+        <div><a href="#trust-models">
+          Defining the Trust Model
+        </a></div>        
+        <ul>
+          <li><a href="#loc-global">Local vs Global Releases</a></li>
+          <li><a href="#trusted-curator">Trusted vs Adversarial Curator</a></li>
+          <li><a href="#release">Static vs Interactive Releases</a></li>
+          <li><a href="#colusions">Multiple Parties and Collusions</a></li>
+          <li><a href="#periodical">Periodical Releases</a></li>
+       </ul>
+       <div><a href="#public-dp">
+        Differential Privacy in the Wild
+      </a></div>   
+      <ul>
+        <li><a href="#registry">Public Registry</a></li>
+        <li><a href="#usecases">Private Usecases</a></li>
+        <li><a href="#case-studies">Case Studies</a></li>
+     </ul>
+     <div><a href="#responsible-dp">
+      Towards Responsible Use
+    </a></div>  
+      </nav>
+    </d-contents>
+
+    
+    <p>This registry lists multiple differential privacy (DP) deployments, with a focus on their privacy budget. It provides examples of DP usage with specified epsilon, delta, and rho values, illustrating their significance and application in real-world scenarios.</p>
+
+    <main>
+      <section id="overview">
+          <h2>Overview</h2>
+          <p>Content about the overview of Differential Privacy.</p>
+      </section>
+
+      <section id="intro-dp">
+          <h2>Introduction to Differential Privacy</h2>
+          <h3 id="rand-resp">Randomized Response Surveys</h3>
+          <p>Details about randomized response techniques.</p>
+          <h3 id="eps-dp">ε-Differential Privacy</h3>
+          <p>Description of ε-differential privacy.</p>
+          <figure >
+            <div id="epsilon_expected_error"></div>
+          </figure>
+          <h3 id="local-dp">Local Differential Privacy</h3>
+          <p>Explanation of local differential privacy.</p>
+          <h3 id="global-dp">Global Differential Privacy</h3>
+          <p>Insight into global differential privacy.</p>
+          <h3 id="eps-delta-dp">(ε, δ)-Differential Privacy</h3>
+          <p>Understanding (ε, δ)-differential privacy.</p>
+          <figure >
+            <div id="laplace_to_gaussian"></div>
+          </figure>
+          <h3 id="zCDP">Zero Concentrate Differential Privacy</h3>
+          <p>Concepts behind zero concentrate differential privacy.</p>
+          <h3 id="dp-conversion">Converting Between Paradigms</h3>
+          <p>Methods to convert between different privacy paradigms.</p>
+      </section>
+
+      <section id="trust-models">
+          <h2>Defining the Trust Model</h2>
+          <h3 id="loc-global">Local vs Global Releases</h3>
+          <p>Comparison between local and global releases.</p>
+          <h3 id="trusted-curator">Trusted vs Adversarial Curator</h3>
+          <p>Difference between trusted and adversarial curators.</p>
+          <h3 id="release">Static vs Interactive Releases</h3>
+          <p>Contrast between static and interactive releases.</p>
+          <h3 id="collusions">Multiple Parties and Collusions</h3>
+          <p>Discussion on the impact of multiple parties and potential collusions.</p>
+          <h3 id="periodical">Periodical Releases</h3>
+          <p>Exploration of periodical data releases in the context of privacy.</p>
+      </section>
+
+      <section id="public-dp">
+          <h2>Differential Privacy in the Wild</h2>
+          <h3 id="registry">Public Registry</h3>
+          <p>Use of differential privacy in public registries.</p>
+          <div id="append-csv-table"  class="l-page-outset"></div>
+          <h3 id="usecases">Private Usecases</h3>
+          <p>Private sector applications of differential privacy.
+          <d-cite bibtex-key="apple_quick,apple_emoji,apple_lookup,apple_healthkit,apple_safari_energy,apple_safari_autoplay,google_community,google_prediction,google_search,google_shared,google_vaccine,google_apple_covid,linkedin_audience,linkedin_labor,meta_movement,meta_full,microsoft_global,microsoft_telemetry,microsoft_us,microsoft_assistive,microsoft_ohmconnect,spectus_mobility,uscensus_post_secondary,uscensus_restricting,uscensus_2020,uscensus_county,wikimedia_distinct"></d-cite></p>
+          <h3 id="case-studies">Case Studies</h3>
+          <p>Case studies showcasing the implementation of differential privacy.</p>
+      </section>
+
+      <section id="responsible-dp">
+          <h2>Towards Responsible Use</h2>
+          <p>Guidelines and considerations for the responsible use of differential privacy technologies.</p>
+      </section>
+  </main>
+
+  </d-article>
+
+  <d-appendix>
+
+    <h3>Contributions</h3>
+    <p>Some text describing who did what.</p>
+    <h3>Reviewers</h3>
+    <p>Some text with links describing who reviewed the article.</p>
+
+    <d-bibliography src="bibliography.bib"></d-bibliography>
+  </d-appendix>
+
+  <distill-footer></distill-footer>
+
+  <script>
+    // Function to parse CSV data
+    function parseCSV(csv, delimiter = ',') {
+        const rows = csv.trim().split('\n');
+        return rows.map(row => row.split(delimiter));
+    }
+    
+    // Function to generate HTML table from CSV data
+    function generateTable(csvData) {
+        const table = document.createElement('table');
+        table.classList.add('l-page-outset');
+        const tbody = document.createElement('tbody');
+    
+        csvData.forEach((row, rowIndex) => {
+            const tr = document.createElement('tr');
+            row.forEach((cell, cellIndex) => {
+                if (cellIndex <= csvData[0].length - 3) { // Exclude Citation Name column
+                    const td = document.createElement('td');
+                    td.innerHTML = rowIndex === 0 ? `<strong>${cell}</strong>` : cell;
+    
+                    // For the Context column (URL)
+                    if (cellIndex === csvData[0].length - 3 && rowIndex > 0) { // Adjusted for additional column
+                        td.innerHTML = `<a href="${row[7]}">${row[6]}</a> <d-cite bibtex-key="${row[8]}"></d-cite>`;
+                        console.log(row[8])
+                    }
+    
+                    tr.appendChild(td);
+                }
+            });
+            tbody.appendChild(tr);
+        });
+    
+        table.appendChild(tbody);
+        return table;
+    }
+    
+    // Function to load CSV data from file and insert the generated table into the page
+    function loadCSVAndGenerateTable(url, elementId) {
+        fetch(url)
+            .then(response => response.text())
+            .then(csv => {
+                const csvData = parseCSV(csv);
+                const table = generateTable(csvData);
+                document.getElementById(elementId).appendChild(table);
+            })
+            .catch(error => console.error('Error loading CSV:', error));
+    }
+    
+    // Load CSV and generate table
+    document.addEventListener('DOMContentLoaded', function () {
+        loadCSVAndGenerateTable('data.csv', 'append-csv-table');
+    });
+    </script>
+
+<script>
+  var laplace_to_gaussian_view;
+  var epsilon_expected_error_view;
+
+  fetch('vega/laplace_to_gaussian.json')
+    .then(res => res.json())
+    .then(spec => {
+      laplace_to_gaussian_view = new vega.View(vega.parse(spec), {
+        renderer: 'canvas',  // renderer (canvas or svg)
+        container: '#laplace_to_gaussian'  // parent DOM container
+      });
+      return laplace_to_gaussian_view.runAsync();
+    })
+    .catch(err => console.error(err));
+
+  fetch('vega/epsilon_expected_error.json')
+    .then(res => res.json())
+    .then(spec => {
+      epsilon_expected_error_view = new vega.View(vega.parse(spec), {
+        renderer: 'canvas',  // renderer (canvas or svg)
+        container: '#epsilon_expected_error'  // parent DOM container
+      });
+      return epsilon_expected_error_view.runAsync();
+    })
+    .catch(err => console.error(err));
+</script>
+
+      
+</body>

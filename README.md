@@ -1,48 +1,25 @@
-# epsilon-registry
-Sharing differential privacy use case information
+# Distill Template
 
-## Development
+This is the repository for the Distill web framework. 
 
-We're using Jekyll to generate static HTML from Markdown. 
-
-### Setup
-
-On MacOS, we want to install via Homebrew rather than relying on the default install.
-```shell
-brew install chruby ruby-install xz
-```
-
-We'll then install a Ruby version matching [the version used by Github Pages](https://pages.github.com/versions/):
-```shell
-ruby-install ruby 2.7.4
-```
-
-Then, assuming your shell is zshell:
-```shell
-echo "source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh" >> ~/.zshrc
-echo "source $(brew --prefix)/opt/chruby/share/chruby/auto.sh" >> ~/.zshrc
-echo "chruby ruby-2.7.4" >> ~/.zshrc
-```
-
-Then open a new shell, and confirm that you've got the right Ruby version:
-```shell
-ruby -v # should be 2.7.4
-```
-
-(The steps above are [recommended by Jekyll](https://jekyllrb.com/docs/installation/macos/),
-but modified to reflect the environment provided by [Github Pages](https://pages.github.com/versions/).)
-
-Now install Jekyll itself and start a development server:
-```shell
-cd docs
-bundle install
-bundle exec jekyll serve
-```
-It should be running at [http://127.0.0.1:4000/].
+## Contributing
 
 
-### PRs and Reviews
+To give feedback, report a bug, or request a feature, please open an issue.
 
-All changes should be made through PRs, and PRs should have one approving review before merge.
+To contribute a change, [check out the contributing guide](CONTRIBUTING.md).
 
-Branch names should begin with the number of the issue addressed, followed by a brief description.
+### Local Development
+
+First, run `npm install` to install all node modules required. Then, run `npm run dev` to start a watching build rollup server. To view the sample pages in the repo, you can run `npm run serve` as a separate process which starts a static server. `npm run build` will run a one-time build.
+
+
+## Disclaimer & License
+
+_This project is research code. It is not an official product of Google or any other institution supporting Distill._
+
+Copyright 2018, The Distill Template Authors.
+
+Licensed under the Apache License, Version 2.0
+
+See the [full license](LICENSE).
