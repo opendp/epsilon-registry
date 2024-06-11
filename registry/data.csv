@@ -1,0 +1,28 @@
+Organization,Epsilon (ε),Delta (δ),Rho (ρ),Model,Dynamic,Context,URL,Citation Name
+Apple,8,N/A,,,,Quick Type Suggestions,https://docs-assets.developer.apple.com/ml-research/papers/learning-with-privacy-at-scale.pdf,apple_quick
+Apple,4,N/A,,,,Emoji Suggestions,https://docs-assets.developer.apple.com/ml-research/papers/learning-with-privacy-at-scale.pdf,apple_emoji
+Apple,8,N/A,,,,Lookup Hints,https://support.apple.com/guide/iphone/search-with-iphone-iph3c511548/ios,apple_lookup
+Apple,2,N/A,,,,HealthKit App,https://docs-assets.developer.apple.com/ml-research/papers/learning-with-privacy-at-scale.pdf,apple_healthkit
+Apple,4,N/A,,,,Safari Energy Draining Domains and Crashing Domains,https://docs-assets.developer.apple.com/ml-research/papers/learning-with-privacy-at-scale.pdf,apple_safari_energy
+Apple,16,N/A,,,,Safari Autoplay Intent Detection,https://docs-assets.developer.apple.com/ml-research/papers/learning-with-privacy-at-scale.pdf,apple_safari_autoplay
+Google,2.64,N/A,,,,Community Mobility Report,https://arxiv.org/abs/2004.04145,google_community
+Google,6.92,10^-5,,,,The Next World Prediction Model,https://ai.googleblog.com/2022/02/federated-learning-with-formal.html,google_prediction
+Google,1.68,N/A,,,,Search Trends Symptoms Dataset,https://arxiv.org/abs/2009.01265,google_search
+Google,0.66,2.1 10^-29,,,,Shared Mobility Dataset,https://www.nature.com/articles/s41467-019-12809-y,google_shared
+Google,2.19,10^-5,,,,Vaccine Search Insights,https://arxiv.org/abs/2107.01179,google_vaccine
+Google & Apple,8,N/A,,,,COVID-19 Exposure Notification Framework,https://covid19.apple.com/contacttracing,google_apple_covid
+LinkedIn,34.9,7 10^-9,,,,Audience Engagement API,https://arxiv.org/abs/2002.05839,linkedin_audience
+LinkedIn,14.4,1.2 10^-9,,,,Labor Market Insights,https://arxiv.org/abs/2010.13981,linkedin_labor
+Meta,2,N/A,,,,Movement Ranges Map,https://research.fb.com/blog/2020/06/protecting-privacy-in-facebook-mobility-data-during-the-covid-19-response/,meta_movement
+Meta,1.453,10^-5,,,,Full URL Dataset,https://dataverse.harvard.edu/file.xhtml?persistentId=doi:10.7910/DVN/TDOAPG/DGSAMS&version=6.2,meta_full
+Microsoft,12,5.8 10^-6,,,,Global victim-perpetrator synthetic dataset,https://www.ctdatacollaborative.org/global-victim-perpetrator-synthetic-dataset,microsoft_global
+Microsoft,1.672,N/A,,,,Telemetry collection in Windows,https://www.microsoft.com/en-us/research/publication/collecting-telemetry-data-privately/,microsoft_telemetry
+Microsoft,0.2,N/A,,,,US Broadband Coverage Dataset,https://arxiv.org/abs/2103.14035,microsoft_us
+Microsoft,4,10^-7,,,,Assistive AI,https://www.microsoft.com/en-us/research/group/msai/articles/assistive-ai-makes-replying-easier-2/,microsoft_assistive
+Microsoft,4.72,5.06 10^-9,,,,OhmConnect,https://edp.recurve.com/,microsoft_ohmconnect
+Spectus,10,,,,,Mobility Trends During Hurricane Irma,https://spectus.ai/wp-content/uploads/2022/10/Spectus_DPWhitepaper_v01b.pdf,spectus_mobility
+United States Census Bureau,3,N/A,,,,Post-Secondary Employment Outcomes,https://lehd.ces.census.gov/data/pseo_experimental.html,uscensus_post_secondary
+United States Census Bureau,13.64,10^-5,,,,Restricting Demographic Information,https://www.census.gov/newsroom/press-releases/2021/2020-census-key-parameters.html,uscensus_restricting
+United States Census Bureau,49.95,10^-5,,,,2020 Census Demographic and Housing Characteristics File,https://www.census.gov/newsroom/press-releases/2023/2020-census-detailed-dhc-file-a.html,uscensus_2020
+United States Census Bureau,35.62,10^-5,,,,County Business Patterns,https://www.census.gov/topics/business-economy/disclosure/about.html,uscensus_county
+Wikimedia Foundation,1,10^-5,,,,Distinct Users Dataset,https://arxiv.org/abs/2308.16298,wikimedia_distinct

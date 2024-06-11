@@ -82,7 +82,6 @@ public
 
 # Log files
 *.log
-*.csv
 *.dat
 *.out
 *.pid
